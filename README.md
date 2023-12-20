@@ -1,2 +1,1 @@
-# portfolio
-Building a new portfolio website with React, Nextjs, Tailwind CSS and Shadcn UI
+Building new portfolio with React, Nextjs, Tailwind CSS and Shadcn UI
