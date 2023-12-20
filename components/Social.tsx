@@ -10,11 +10,9 @@ const icons = [
 
 export default function Social({
   containerStyles,
-  containerIconStyles,
   iconStyles,
 }: {
   containerStyles: string;
-  containerIconStyles: string;
   iconStyles: string;
 }) {
   return (
@@ -24,7 +22,7 @@ export default function Social({
           <Link
             href={icon.path}
             key={index}
-            className={`${containerIconStyles}`}>
+            className="inline-flex items-center justify-center w-10 h-10 mr-2 bg-secondary rounded-full focus:shadow-outline hover:text-secondary hover:bg-primary transition-all">
             <div className={`${iconStyles}`}>{icon.name}</div>
           </Link>
         );

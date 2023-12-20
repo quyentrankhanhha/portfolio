@@ -24,7 +24,7 @@ export default function Nav({
 }: {
   containerStyles: string;
   linkStyles: string;
-  underStyles: string;
+  underStyles?: string;
 }) {
   const path = usePathname();
   return (

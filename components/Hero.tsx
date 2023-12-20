@@ -31,7 +31,6 @@ export default function Hero() {
             </div>
             <Social
               containerStyles="flex gap-x-6 mx-auto xl:mx-0"
-              containerIconStyles="inline-flex items-center justify-center w-10 h-10 mr-2 bg-secondary rounded-full focus:shadow-outline hover:text-secondary hover:bg-primary transition-all"
               iconStyles="text-[20px] rounded"
             />
           </div>
