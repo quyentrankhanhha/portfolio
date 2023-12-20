@@ -1,19 +1,25 @@
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function Logo() {
-  const { theme } = useTheme();
-
   return (
     <Link href="/">
       <Image
-        src={theme === "light" ? "/logo-light.png" : "/logo-dark.svg"}
-        width={100}
-        height={100}
+        src="/logo-light.svg"
+        width={80}
+        height={80}
         priority
-        alt="logo"
+        alt="logo-light-mode"
+        className="dark:hidden"
+      />
+      <Image
+        src="/logo-dark.svg"
+        width={80}
+        height={80}
+        priority
+        alt="logo-dark-mode"
+        className="hidden dark:block"
       />
     </Link>
   );
