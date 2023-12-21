@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { navLinks } from "./consts/data";
+import { navLinks } from "../consts/link";
 
 export default function Nav({
   containerStyles,

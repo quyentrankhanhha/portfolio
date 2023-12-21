@@ -1,11 +1,13 @@
 import React from "react";
 import DevImg from "./DevImg";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { EducationType } from "@/types";
+import { getEducation } from "@/sanity/sanity.query";
+import { infoData } from "@/consts/data";
 
-export default function About() {
-  const getData = (arr: any[], title: string) => {
-    return arr.find((item) => item.title === title).data;
-  };
+export default async function About() {
+  const education: EducationType = await getEducation();
+  console.log(education);
   return (
     <section className="xl:h-[860px] pb-12 xl:py-24">
       <div className="container mx-auto">
@@ -34,6 +36,18 @@ export default function About() {
                     <p className="subttile max-w-xl mx-auto xl:mx-0">
                       test test
                     </p>
+                    <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                      {infoData.map((item, index) => {
+                        return (
+                          <div
+                            className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                            key={index}>
+                            <div className="text-primary">{item.icon}</div>
+                            <div>{item.text}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </TabsContent>
                 <TabsContent value="exp">exp</TabsContent>

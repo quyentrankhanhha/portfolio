@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
-import { socialLinks } from "./consts/data";
+import { socialLinks } from "../consts/link";
 
 export default function Social({
   containerStyles,
