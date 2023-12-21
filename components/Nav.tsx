@@ -1,21 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-
-const links = [
-  {
-    path: "/",
-    name: "home",
-  },
-  {
-    path: "/projects",
-    name: "my projects",
-  },
-  {
-    path: "/contact",
-    name: "contact",
-  },
-];
+import { navLinks } from "./consts/data";
 
 export default function Nav({
   containerStyles,
@@ -29,7 +15,7 @@ export default function Nav({
   const path = usePathname();
   return (
     <nav className={`${containerStyles}`}>
-      {links.map((link, index) => {
+      {navLinks.map((link, index) => {
         return (
           <Link
             key={index}

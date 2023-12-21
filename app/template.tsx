@@ -1,6 +1,5 @@
 "use client";
 import useScrollProgress from "@/hooks/useScrollProgress";
-import React from "react";
 import { motion } from "framer-motion";
 
 const variants = {
@@ -8,7 +7,7 @@ const variants = {
   enter: { opacity: 1 },
 };
 
-const Template = ({ children }) => {
+const Template = ({ children }: { children: React.ReactNode }) => {
   const completion: number = useScrollProgress();
   return (
     <>

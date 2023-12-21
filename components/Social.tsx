@@ -1,12 +1,8 @@
 "use client";
-import { GithubIcon, LinkedinIcon } from "lucide-react";
+
 import Link from "next/link";
 import React from "react";
-
-const icons = [
-  { path: "/", name: <LinkedinIcon /> },
-  { path: "/", name: <GithubIcon /> },
-];
+import { socialLinks } from "./consts/data";
 
 export default function Social({
   containerStyles,
@@ -17,7 +13,7 @@ export default function Social({
 }) {
   return (
     <div className={`${containerStyles}`}>
-      {icons.map((icon, index) => {
+      {socialLinks.map((icon, index) => {
         return (
           <Link
             href={icon.path}
