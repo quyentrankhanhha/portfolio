@@ -1,14 +1,14 @@
 const tools = {
-  name: "tools",
-  type: "document",
-  title: "Tools",
+  name: 'tools',
+  type: 'document',
+  title: 'Tools',
   fields: [
     {
-      name: "name",
-      type: "string",
-      title: "Name",
-    },
-  ],
-};
+      name: 'name',
+      type: 'string',
+      title: 'Name'
+    }
+  ]
+}
 
-export default tools;
+export default tools

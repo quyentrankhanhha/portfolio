@@ -1,34 +1,35 @@
 const certificates = {
-  name: "certificates",
-  type: "document",
-  title: "Certificates",
+  name: 'certificates',
+  type: 'document',
+  title: 'Certificates',
   fields: [
     {
-      name: "name",
-      type: "string",
-      title: "Name",
+      name: 'name',
+      type: 'string',
+      title: 'Name'
     },
     {
-      name: "source",
-      type: "string",
-      title: "Source",
+      name: 'source',
+      type: 'string',
+      title: 'Source'
     },
     {
-      name: "date",
-      type: "string",
-      title: "Date",
+      name: 'date',
+      type: 'string',
+      title: 'Date'
     },
     {
-      name: "description",
-      type: "text",
-      title: "Description",
+      name: 'description',
+      type: 'array',
+      title: 'Description',
+      of: [{ type: 'string' }]
     },
     {
-      name: "link",
-      type: "url",
-      title: "Link",
-    },
-  ],
-};
+      name: 'link',
+      type: 'url',
+      title: 'Link'
+    }
+  ]
+}
 
-export default certificates;
+export default certificates

@@ -1,30 +1,29 @@
-"use client";
-import CountUp from "react-countup";
+'use client'
+import CountUp from 'react-countup'
 
 export default function Badge({
   containerStyles,
   icon,
   endCountNum,
   endCountText,
-  badgeText,
+  badgeText
 }: {
-  containerStyles: string;
-  icon: React.ReactNode;
-  endCountNum: number;
-  endCountText?: string;
-  badgeText: string;
+  containerStyles: string
+  icon: React.ReactNode
+  endCountNum: number
+  endCountText?: string
+  badgeText: string
 }) {
   return (
     <div className={`badge ${containerStyles}`}>
-      <div className="text-3xl text-primary">{icon}</div>
-      <div className="flex items-center gap-x-2">
-        <div className="text-4xl leading-none font-bold text-primary">
-          <CountUp end={endCountNum} delay={1} duration={4} /> {endCountText}
+      <div className='text-3xl text-primary'>{icon}</div>
+      <div className='flex items-center gap-x-2'>
+        <div className='text-4xl font-bold leading-none text-primary'>
+          <CountUp end={endCountNum} delay={1} />
+          {endCountText}
         </div>
-        <div className="max-w-[70px] leading-none text-[15px] font-medium text-black">
-          {badgeText}
-        </div>
+        <div className='max-w-[70px] text-[15px] font-medium leading-none text-black'>{badgeText}</div>
       </div>
     </div>
-  );
+  )
 }

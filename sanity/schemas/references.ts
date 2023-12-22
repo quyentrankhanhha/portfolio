@@ -1,30 +1,30 @@
 const references = {
-  name: "references",
-  type: "document",
-  title: "References",
+  name: 'references',
+  type: 'document',
+  title: 'References',
   fields: [
     {
-      name: "company",
-      type: "string",
-      title: "Company",
+      name: 'company',
+      type: 'string',
+      title: 'Company'
     },
     {
-      name: "name",
-      type: "string",
-      title: "Name",
+      name: 'name',
+      type: 'string',
+      title: 'Name'
     },
     {
-      name: "phone",
-      type: "string",
-      title: "Phone Number",
+      name: 'phone',
+      type: 'string',
+      title: 'Phone Number'
     },
     {
-      name: "email",
-      type: "string",
-      title: "Email Address",
-      validation: (Rule) => Rule.required().email(),
-    },
-  ],
-};
+      name: 'email',
+      type: 'string',
+      title: 'Email Address',
+      validation: (Rule) => Rule.required().email()
+    }
+  ]
+}
 
-export default references;
+export default references

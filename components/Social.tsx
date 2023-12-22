@@ -1,16 +1,10 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import React from "react";
-import { socialLinks } from "../consts/link";
+import Link from 'next/link'
+import React from 'react'
+import { socialLinks } from '../consts/link'
 
-export default function Social({
-  containerStyles,
-  iconStyles,
-}: {
-  containerStyles: string;
-  iconStyles: string;
-}) {
+export default function Social({ containerStyles, iconStyles }: { containerStyles: string; iconStyles: string }) {
   return (
     <div className={`${containerStyles}`}>
       {socialLinks.map((icon, index) => {
@@ -18,11 +12,12 @@ export default function Social({
           <Link
             href={icon.path}
             key={index}
-            className="inline-flex items-center justify-center w-10 h-10 mr-2 bg-secondary rounded-full focus:shadow-outline hover:text-secondary hover:bg-primary transition-all">
+            className='focus:shadow-outline mr-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary transition-all hover:bg-primary hover:text-secondary'
+          >
             <div className={`${iconStyles}`}>{icon.name}</div>
           </Link>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

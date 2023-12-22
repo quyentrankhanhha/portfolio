@@ -1,21 +1,21 @@
-import { GithubIcon, LinkedinIcon } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from 'lucide-react'
 
 export const navLinks = [
   {
-    path: "/",
-    name: "home",
+    path: '/',
+    name: 'home'
   },
   {
-    path: "/projects",
-    name: "my projects",
+    path: '/projects',
+    name: 'my projects'
   },
   {
-    path: "/contact",
-    name: "contact",
-  },
-];
+    path: '/contact',
+    name: 'contact'
+  }
+]
 
 export const socialLinks = [
-  { path: "https://github.com/quyentrankhanhha", name: <LinkedinIcon /> },
-  { path: "https://www.linkedin.com/in/ha-quyen/", name: <GithubIcon /> },
-];
+  { path: 'https://github.com/quyentrankhanhha', name: <LinkedinIcon /> },
+  { path: 'https://www.linkedin.com/in/ha-quyen/', name: <GithubIcon /> }
+]
