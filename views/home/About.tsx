@@ -1,6 +1,6 @@
 import React from 'react'
-import DevImg from './DevImg'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs'
+import DevImg from '../../components/DevImg'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs'
 import { CommonType, EducationType } from '@/types'
 import { getEducation, getTools } from '@/sanity/sanity.query'
 import { infoData } from '@/consts/data'

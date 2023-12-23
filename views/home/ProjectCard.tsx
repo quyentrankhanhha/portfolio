@@ -1,7 +1,7 @@
 import { ProjectType } from '@/types'
 import React from 'react'
-import { Card, CardHeader } from './ui/card'
-import { Badge } from './ui/badge'
+import { Card, CardHeader } from '../../components/ui/card'
+import { Badge } from '../../components/ui/badge'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GithubIcon, Link2Icon } from 'lucide-react'
@@ -10,7 +10,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
   return (
     <Card className='group relative h-full overflow-hidden'>
       <CardHeader className='p-0'>
-        <div className='xl:bg-project_bg_light xl:dark:bg-project_bg_dark relative flex h-[200px] w-full items-center justify-center overflow-hidden bg-secondary xl:bg-[110%] xl:bg-no-repeat dark:bg-secondary/40'>
+        <div className='relative flex h-[200px] w-full items-center justify-center overflow-hidden bg-secondary xl:bg-project_bg_light xl:bg-[110%] xl:bg-no-repeat dark:bg-secondary/40 xl:dark:bg-project_bg_dark'>
           <Image
             className='absolute bottom-0 shadow-2xl'
             src={project.projectImage?.image}
