@@ -13,6 +13,7 @@ export default function Social({ containerStyles, iconStyles }: { containerStyle
             href={icon.path}
             key={index}
             className='focus:shadow-outline mr-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary transition-all hover:bg-primary hover:text-secondary'
+            target='_blank'
           >
             <div className={`${iconStyles}`}>{icon.name}</div>
           </Link>

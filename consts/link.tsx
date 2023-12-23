@@ -6,8 +6,8 @@ export const navLinks = [
     name: 'home'
   },
   {
-    path: '/projects',
-    name: 'my projects'
+    path: '/ref',
+    name: 'My References'
   },
   {
     path: '/contact',

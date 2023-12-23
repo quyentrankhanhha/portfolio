@@ -1,10 +1,10 @@
 import React from 'react'
 import { Briefcase, ChevronDown, Download, Send, Users } from 'lucide-react'
 import Link from 'next/link'
-import { Button } from '../../components/ui/button'
-import Social from '../../components/Social'
-import DevImg from '../../components/DevImg'
-import Badge from '../../components/Badge'
+import { Button } from '../../ui/button'
+import Social from '../../Social'
+import DevImg from '../../DevImg'
+import Badge from '../../Badge'
 
 export default function Hero() {
   return (
@@ -39,7 +39,7 @@ export default function Hero() {
               icon={<Users />}
               endCountNum={3}
               badgeText='References'
-              link='#references'
+              link='/ref'
             />
             <div className='dark:hero_shape2_dark absolute -right-2 -top-1 h-[500px] w-[580px] bg-hero_shape2_light bg-no-repeat'></div>
             <DevImg
