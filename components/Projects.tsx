@@ -35,7 +35,7 @@ export default function Projects() {
         </div>
         <div className='w-full'>
           <Swiper
-            className='h-[360px]'
+            className='h-[440px]'
             slidesPerView={1}
             breakpoints={{
               1024: {

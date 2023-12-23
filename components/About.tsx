@@ -1,13 +1,12 @@
 import React from 'react'
 import DevImg from './DevImg'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs'
-import { CommonType, EducationType, ExperienceType } from '@/types'
-import { getEducation, getExperiences, getTools } from '@/sanity/sanity.query'
+import { CommonType, EducationType } from '@/types'
+import { getEducation, getTools } from '@/sanity/sanity.query'
 import { infoData } from '@/consts/data'
-import { GraduationCap, Code, Code2 } from 'lucide-react'
+import { GraduationCap } from 'lucide-react'
 
 export default async function About() {
-  const experiences: ExperienceType[] = await getExperiences()
   const education: EducationType[] = await getEducation()
   const tools: CommonType[] = await getTools()
 
@@ -24,9 +23,8 @@ export default async function About() {
           </div>
           <div className='flex-1'>
             <Tabs defaultValue='personal'>
-              <TabsList className='grid w-full xl:max-w-[520px] xl:grid-cols-4 xl:border dark:border-none'>
+              <TabsList className='grid w-full xl:max-w-[520px] xl:grid-cols-3 xl:border dark:border-none'>
                 <TabsTrigger value='personal'>Personal Info</TabsTrigger>
-                <TabsTrigger value='experience'>Experiences</TabsTrigger>
                 <TabsTrigger value='education'>Education</TabsTrigger>
                 <TabsTrigger value='tools'>Tools</TabsTrigger>
               </TabsList>
@@ -45,38 +43,6 @@ export default async function About() {
                         )
                       })}
                     </div>
-                  </div>
-                </TabsContent>
-                <TabsContent value='experience'>
-                  <div>
-                    <h3 className='h3 mb-8 text-center xl:text-left'>My Journey</h3>
-                  </div>
-                  <div className='flex flex-col gap-y-8'>
-                    {experiences &&
-                      experiences.map((experience, expInd) => {
-                        return (
-                          <div className='group gap-x-8 ' key={experience._id}>
-                            <div className='flex items-center gap-x-4 text-[22px] text-primary'>
-                              {expInd == 0 ? <Code /> : <Code2 />}
-                              <h4>{experience.title}</h4>
-                            </div>
-                            <div className='flex-col-2 flex gap-x-4'>
-                              <div className='relative ml-3 h-[60px] w-[1px] bg-primary'>
-                                <div className='absolute -left-[5px] bottom-0 h-[11px] w-[11px] rounded-full bg-primary transition-all duration-500 group-hover:translate-y-[-50px]'></div>
-                              </div>
-                              <div className='ml-3'>
-                                <span>{experience.company}</span> - <span>{experience.location}</span>
-                                <div className='text-base font-medium'>{experience.year}</div>
-                                {experience.description &&
-                                  experience.description &&
-                                  experience.description.map((item, index) => {
-                                    return <div key={index}>{item}</div>
-                                  })}
-                              </div>
-                            </div>
-                          </div>
-                        )
-                      })}
                   </div>
                 </TabsContent>
                 <TabsContent value='education'>

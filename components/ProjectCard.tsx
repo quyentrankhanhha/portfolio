@@ -39,7 +39,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
         {project.inProgress && (
           <Badge className='absolute left-5 top-4 mb-2 text-sm font-medium uppercase'>In Progress</Badge>
         )}
-        <h4 className='h4 mb-1'>{project.year}</h4>
+        <h4 className='h4 mb-2'>{project.year}</h4>
         <p className='text-sm text-muted-foreground'>{project.tools}</p>
       </div>
     </Card>
