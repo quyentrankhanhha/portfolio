@@ -77,7 +77,9 @@ module.exports = {
         about_shape_light: 'url(/about/shape-light.svg)',
         about_shape_dark: 'url(/about/shape-dark.svg)',
         dots_light: 'url(/dots-light.svg)',
-        dots_dark: 'url(/dots-dark.svg)'
+        dots_dark: 'url(/dots-dark.svg)',
+        project_bg_light: 'url(/project/project-bg-light.png)',
+        project_bg_dark: 'url(/project/project-bg-dark.png)'
       }
     }
   },

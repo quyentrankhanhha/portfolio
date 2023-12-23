@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react'
 
-export default function Contact() {
-  return <div>Contact page</div>;
+export default function ContactPage() {
+  return <div>Contact page</div>
 }

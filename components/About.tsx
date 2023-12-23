@@ -12,7 +12,7 @@ export default async function About() {
   const tools: CommonType[] = await getTools()
 
   return (
-    <section className='pb-12 xl:h-[860px] xl:py-24'>
+    <section className='pb-12 xl:py-24'>
       <div className='container mx-auto'>
         <h2 className='section-title mx-auto mb-8 text-center xl:mb-16'>About me</h2>
         <div className='flex flex-col gap-x-6 xl:flex-row'>

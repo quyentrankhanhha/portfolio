@@ -9,8 +9,26 @@ const projects = {
       title: 'Name'
     },
     {
+      name: 'projectImage',
+      title: 'Project Image',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string'
+        }
+      ]
+    },
+    {
+      name: 'inProgress',
+      type: 'boolean',
+      title: 'In Progress'
+    },
+    {
       name: 'tools',
-      type: 'text',
+      type: 'string',
       title: 'Tools'
     },
     {
