@@ -17,12 +17,12 @@ export default function Hero() {
             <p className='subtitle mx-auto max-w-[490px] xl:mx-0'>description</p>
             <div className='mx-auto mb-12 flex flex-col gap-x-3 gap-y-3 md:flex-row xl:mx-0'>
               <Link href='/contact'>
-                <Button className='gap-x-2'>
-                  Contact me <Send size={16} />
+                <Button className='group gap-x-2 hover:scale-105'>
+                  Contact me <Send size={16} className='group-hover:-translate-y-1 group-hover:translate-x-0.5' />
                 </Button>
               </Link>
-              <Button variant='secondary' className='gap-x-2'>
-                Download CV <Download size={16} />
+              <Button variant='secondary' className='group gap-x-2 hover:scale-105'>
+                Download CV <Download size={16} className='group-hover:translate-y-0.5' />
               </Button>
             </div>
             <Social containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconStyles='text-[20px] rounded' />

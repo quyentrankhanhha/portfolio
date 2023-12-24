@@ -1,12 +1,10 @@
 'use client'
 
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { A11y, Navigation, Pagination } from 'swiper/modules'
-import { Button } from '../../ui/button'
 import { getProjects } from '@/sanity/sanity.query'
 import { ProjectType } from '@/types'
 import ProjectCard from './ProjectCard'
@@ -29,9 +27,6 @@ export default function Projects() {
         <div className='mx-auto mb-12 flex max-w-[400px] flex-col items-center justify-center text-center'>
           <h2 className='section-title mb-4 '>Lastest Projects</h2>
           <p className='subtitle mb-8'>testing</p>
-          <Link href='/projects'>
-            <Button>All projects</Button>
-          </Link>
         </div>
         <div className='w-full'>
           <Swiper
