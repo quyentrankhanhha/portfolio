@@ -8,6 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get('email')
   const message = formData.get('message')
+  let data
 
   if (!validateString(senderEmail)) {
     return {
@@ -22,7 +23,7 @@ export const sendEmail = async (formData: FormData) => {
   }
 
   try {
-    await resend.emails.send({
+    data = await resend.emails.send({
       from: 'Portfolio Contact<onboarding@resend.dev>',
       to: 'quyentrankhanhha@gmail.com',
       subject: 'Message from portfolio',
@@ -33,5 +34,9 @@ export const sendEmail = async (formData: FormData) => {
     return {
       error: getErrorMessage(error)
     }
+  }
+
+  return {
+    data
   }
 }
