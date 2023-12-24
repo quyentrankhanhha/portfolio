@@ -1,5 +1,6 @@
 'use server'
 
+import ContactFormEmail from '@/components/ContactFormEmail'
 import { getErrorMessage, validateString } from '@/lib/utils'
 import { Resend } from 'resend'
 
@@ -28,7 +29,7 @@ export const sendEmail = async (formData: FormData) => {
       to: 'quyentrankhanhha@gmail.com',
       subject: 'Message from portfolio',
       reply_to: senderEmail as string,
-      text: message as string
+      react: ContactFormEmail({ message: message as string, senderEmail: senderEmail as string })
     })
   } catch (error: unknown) {
     return {
