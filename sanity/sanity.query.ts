@@ -1,6 +1,6 @@
 import { groq } from 'next-sanity'
 import client from './sanity.client'
-import { CommonType, EducationType, ExperienceType, ProjectType } from '@/types'
+import { CommonType, EducationType, ExperienceType, ProjectType, ResumeType } from '@/types'
 
 export async function getExperiences(): Promise<ExperienceType[]> {
   return client.fetch(
@@ -51,6 +51,17 @@ export async function getProjects(): Promise<ProjectType[]> {
         github,
         projectImage {alt, "image": asset->url},
         inProgress
+      }`
+  )
+}
+
+export async function getResume(): Promise<ResumeType[]> {
+  return client.fetch(
+    groq`*[_type == "resume"] {
+        _id,
+        _createdAt,
+        name,
+        "link": file
       }`
   )
 }

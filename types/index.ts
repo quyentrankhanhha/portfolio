@@ -31,4 +31,9 @@ export interface ProjectType extends CommonType {
   tools: string
   link?: string
   inProgress: boolean
+  name: string
+}
+
+export interface ResumeType extends CommonType {
+  link: string
 }

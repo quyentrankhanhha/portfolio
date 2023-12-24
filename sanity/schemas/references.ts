@@ -1,3 +1,5 @@
+import { defineField } from 'sanity'
+
 const references = {
   name: 'references',
   type: 'document',
@@ -18,12 +20,12 @@ const references = {
       type: 'string',
       title: 'Phone Number'
     },
-    {
+    defineField({
       name: 'email',
       type: 'string',
       title: 'Email Address',
       validation: (Rule) => Rule.required().email()
-    }
+    })
   ]
 }
 

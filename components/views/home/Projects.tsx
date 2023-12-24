@@ -22,11 +22,11 @@ export default function Projects() {
   }, [])
 
   return (
-    <section className='relative mb-12 xl:mb-48'>
+    <section className='relative mb-12 pt-12 xl:mb-48'>
       <div className='container mx-auto'>
-        <div className='mx-auto mb-12 flex max-w-[400px] flex-col items-center justify-center text-center'>
-          <h2 className='section-title mb-4 '>Lastest Projects</h2>
-          <p className='subtitle mb-8'>testing</p>
+        <div className='mx-auto mb-6 flex max-w-[400px] flex-col items-center justify-center text-center'>
+          <h2 className='section-title mb-4'>Lastest Projects</h2>
+          <p className='subtitle'>testing</p>
         </div>
         <div className='w-full'>
           <Swiper

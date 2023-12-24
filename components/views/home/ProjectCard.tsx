@@ -11,14 +11,17 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
     <Card className='group relative h-full overflow-hidden'>
       <CardHeader className='p-0'>
         <div className='relative flex h-[200px] w-full items-center justify-center overflow-hidden bg-secondary xl:bg-project_bg_light xl:bg-[110%] xl:bg-no-repeat dark:bg-secondary/40 xl:dark:bg-project_bg_dark'>
-          <Image
-            className='absolute bottom-0 shadow-2xl'
-            src={project.projectImage?.image}
-            alt={project.projectImage?.alt}
-            width={247}
-            height={200}
-            priority
-          />
+          {project.projectImage && (
+            <Image
+              className='absolute bottom-0 shadow-2xl'
+              src={project.projectImage?.image || ''}
+              alt={project.projectImage?.alt}
+              width={247}
+              height={200}
+              priority
+            />
+          )}
+
           <div className='flex gap-x-4'>
             <Link
               href={project.github}
@@ -39,7 +42,8 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
         {project.inProgress && (
           <Badge className='absolute left-5 top-4 mb-2 text-sm font-medium uppercase'>In Progress</Badge>
         )}
-        <h4 className='h4 mb-2'>{project.year}</h4>
+        <h4 className='h4 mb-1'>{project.name}</h4>
+        <p className='mb-2 font-medium'>{project.year}</p>
         <p className='text-sm text-muted-foreground'>{project.tools}</p>
       </div>
     </Card>
