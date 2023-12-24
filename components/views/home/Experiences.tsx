@@ -7,7 +7,7 @@ export default async function Experiences() {
   const experiences: ExperienceType[] = await getExperiences()
 
   return (
-    <section className='pb-12 pt-12 xl:py-24'>
+    <section id='experience' className='pb-12 pt-12 xl:py-24'>
       <div className='container mx-auto'>
         <h2 className='section-title mx-auto mb-12 text-center xl:mb-16'>My Experiences</h2>
         <div className='mx-auto grid max-w-[1024px] grid-cols-[100%] gap-6'>

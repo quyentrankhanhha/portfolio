@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function ContactPage() {
   return (
-    <section>
+    <section className='h-[55vh]'>
       <div className='container mx-auto'>
         <div className='mb-6 grid pt-12 xl:mb-24 xl:h-[480px] xl:grid-cols-2'>
           <div className='grid xl:justify-items-center '>

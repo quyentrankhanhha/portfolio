@@ -1,5 +1,5 @@
 import React from 'react'
-import { Briefcase, Download, Send, Users } from 'lucide-react'
+import { Briefcase, Eye, Send, Users } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '../../ui/button'
 import Social from '../../Social'
@@ -11,9 +11,12 @@ import { ResumeType } from '@/types'
 
 export default async function Hero() {
   const resumeLink: ResumeType[] = await getResume()
-  console.log(resumeLink)
+
   return (
-    <section className='h-[86vh] bg-hero bg-cover bg-bottom bg-no-repeat pb-12 pt-12 xl:py-24 xl:pt-28 dark:bg-none'>
+    <section
+      id='hero'
+      className='h-[86vh] bg-hero bg-cover bg-bottom bg-no-repeat pb-12 pt-12 xl:py-24 xl:pt-28 dark:bg-none'
+    >
       <div className='container mx-auto'>
         <div className='flex justify-between gap-x-8'>
           <div className='mx-auto flex max-w-[600px] flex-col justify-center text-center xl:mx-0 xl:text-left'>
@@ -29,7 +32,7 @@ export default async function Hero() {
               {resumeLink && (
                 <Link href={resumeLink[0].link} target='_blank'>
                   <Button variant='secondary' className='group gap-x-2 hover:scale-105'>
-                    View CV <Download size={16} className='group-hover:translate-y-0.5' />
+                    View CV <Eye size={16} className='group-hover:translate-x-0.5' />
                   </Button>
                 </Link>
               )}
