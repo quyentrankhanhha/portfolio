@@ -9,11 +9,10 @@ export default function Header() {
   const [header, setHeader] = useState<boolean>(false)
 
   useEffect(() => {
-    const scrollYPos: void = window.addEventListener('scroll', () => {
-      window.scrollY > 50 ? setHeader(true) : setHeader(false)
-    })
-
-    return () => window.removeEventListener('scroll', scrollYPos)
+    return () =>
+      window.removeEventListener('scroll', () => {
+        window.scrollY > 50 ? setHeader(true) : setHeader(false)
+      })
   })
 
   return (
