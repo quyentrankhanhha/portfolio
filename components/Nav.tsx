@@ -13,6 +13,7 @@ export default function Nav({
   underStyles?: string
 }) {
   const path = usePathname()
+
   return (
     <nav className={`${containerStyles}`}>
       {navLinks.map((link, index) => {

@@ -8,12 +8,18 @@ import MobileNav from './MobileNav'
 export default function Header() {
   const [header, setHeader] = useState<boolean>(false)
 
+  const scrollHeader = () => {
+    if (window && window.scrollY >= 20) {
+      setHeader(true)
+    } else setHeader(false)
+  }
+
   useEffect(() => {
-    return () =>
-      window.removeEventListener('scroll', () => {
-        window.scrollY > 50 ? setHeader(true) : setHeader(false)
-      })
-  })
+    window.addEventListener('scroll', scrollHeader)
+    return () => {
+      window.removeEventListener('scroll', scrollHeader)
+    }
+  }, [])
 
   return (
     <header
