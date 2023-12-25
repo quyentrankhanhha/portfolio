@@ -23,18 +23,23 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
           )}
 
           <div className='flex gap-x-4'>
-            <Link
-              href={project.github}
-              className='flex h-[54px] w-[54px] scale-0 items-center justify-center rounded-full bg-primary opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100'
-            >
-              <GithubIcon className='text-white' />
-            </Link>
-            <Link
-              href={project.github}
-              className='flex h-[54px] w-[54px] scale-0 items-center justify-center rounded-full bg-primary opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100'
-            >
-              <Link2Icon className='text-white' />
-            </Link>
+            {project.github && (
+              <Link
+                href={project.github}
+                className='flex h-[54px] w-[54px] scale-0 items-center justify-center rounded-full bg-primary opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100'
+              >
+                <GithubIcon className='text-white' />
+              </Link>
+            )}
+
+            {project.link && (
+              <Link
+                href={project.link}
+                className='flex h-[54px] w-[54px] scale-0 items-center justify-center rounded-full bg-primary opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100'
+              >
+                <Link2Icon className='text-white' />
+              </Link>
+            )}
           </div>
         </div>
       </CardHeader>
