@@ -11,15 +11,12 @@ jobs:
         node-version: [20.10.x]
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          cache: 'npm'
       - name: Install dependencies
-        run: pnpm install -D
+        run: npm install
       - name: Check formatting with Prettier
-        run: pnpm prettier:check:ci
+        run: npm prettier:check:ci
