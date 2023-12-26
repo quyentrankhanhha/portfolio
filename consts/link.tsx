@@ -12,6 +12,6 @@ export const navLinks = [
 ]
 
 export const socialLinks = [
-  { path: 'https://github.com/quyentrankhanhha', name: <LinkedinIcon /> },
-  { path: 'https://www.linkedin.com/in/ha-quyen/', name: <GithubIcon /> }
+  { path: 'https://github.com/quyentrankhanhha', name: <GithubIcon /> },
+  { path: 'https://www.linkedin.com/in/ha-quyen/', name: <LinkedinIcon /> }
 ]
