@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link'
 import CountUp from 'react-countup'
 
 export default function Badge({
@@ -8,14 +7,12 @@ export default function Badge({
   endCountNum,
   endCountText,
   badgeText,
-  link
 }: {
   containerStyles: string
   icon: React.ReactNode
   endCountNum: number
   endCountText?: string
   badgeText: string
-  link?: string
 }) {
   return (
     <div className={`badge ${containerStyles}`}>

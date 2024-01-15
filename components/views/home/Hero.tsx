@@ -49,9 +49,8 @@ export default async function Hero() {
             <Badge
               containerStyles='absolute top-[75%] right-0'
               icon={<Users />}
-              endCountNum={3}
+              endCountNum={5}
               badgeText='References'
-              link='/ref'
             />
             <div className='dark:hero_shape2_dark absolute -right-2 -top-1 h-[500px] w-[580px] bg-hero_shape2_light bg-no-repeat'></div>
             <DevImg
