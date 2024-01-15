@@ -6,7 +6,7 @@ export default function Badge({
   icon,
   endCountNum,
   endCountText,
-  badgeText,
+  badgeText
 }: {
   containerStyles: string
   icon: React.ReactNode
