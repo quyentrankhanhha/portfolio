@@ -11,7 +11,7 @@ export default function Footer() {
           <Social containerStyles='flex gap-x-6 mx-auto xl:mx-0 my-4' iconStyles='rounded' />
           <p className='text-xs text-gray-500'>
             <span className='font-semibold'>About this website:</span> build with React & Next.js, TypeScript, Tailwind
-            CSS, shadcn/ui, Framer Motion, React Email & Resend, Sanity, and Vercel hosting.
+            CSS, shadcn/ui, Framer Motion, React Email & Resend, Sanity, and Vercel hosting with CI/CD.
           </p>
         </div>
       </div>
